@@ -1,84 +1,101 @@
-/* Reset default browser styles */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
-
-body {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(135deg, #4facfe, #00f2fe);
-}
-
-.login-container {
-  background: white;
-  padding: 30px 40px;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  width: 100%;
-  max-width: 400px;
+.page_heading{
   text-align: center;
 }
-
-.login-container h1 {
-  margin-bottom: 20px;
-  color: #333;
-  font-size: 24px;
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border: 2px solid;
 }
-
-.login-container label {
-  display: block;
-  text-align: left;
-  margin: 10px 0 5px;
-  font-weight: bold;
-  color: #555;
-}
-
-.login-container input {
-  width: 100%;
+nav li a{
+  text-decoration: none;
+  color: black;
+  margin : 10px;
   padding: 10px;
+  border-right: 2px solid;
+  border-left: 2px solid;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+li{
+  list-style: none;
+}
+.rigth{
+  margin-left: auto;
+}
+.home-container {
+  text-align: center;
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  width: 90%;
+  max-width: 600px;
+}
+
+.home-container h1 {
+  font-size: 26px;
   margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  outline: none;
-  transition: border 0.3s;
+  color: #333;
 }
 
-.login-container input:focus {
-  border-color: #4facfe;
+.home-container p {
+  margin-bottom: 30px;
+  color: #555;
+  font-size: 18px;
 }
 
-.login-container button {
-  width: 100%;
-  padding: 12px;
-  background: #4facfe;
-  border: none;
+.options {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.card {
+  display: inline-block;
+  padding: 20px 30px;
+  background: #ff9a9e;
   color: white;
-  font-size: 16px;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 12px;
+  transition: transform 0.3s, background 0.3s;
+  min-width: 180px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background: #e96a6e;
+}
+
+.card.create {
+  background: #6a82fb;
+}
+
+.card.create:hover {
+  background: #4654d8;
+}
+
+.logout-btn {
+  margin-top: 25px;
+  padding: 12px 20px;
+  background: #555;
+  color: white;
+  border: none;
   border-radius: 8px;
+  font-size: 16px;
   cursor: pointer;
   transition: background 0.3s;
 }
 
-.login-container button:hover {
-  background: #3a8bd8;
-}
-
-.login-container p {
-  margin-top: 15px;
-  color: #333;
-}
-
-.login-container a {
-  color: #4facfe;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.login-container a:hover {
-  text-decoration: underline;
+.logout-btn:hover {
+  background: #333;
 }
