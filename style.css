@@ -1,9 +1,6 @@
 /* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+body{
+    margin: 10px;
 }
 .page_heading{
   text-align: center;
@@ -30,14 +27,26 @@ li{
 .rigth{
   margin-left: auto;
 }
+.background{
+    position: absolute;
+    z-index: 0;
+    animation: motion 15s infinite linear;
+    height: 200px;
+    border: 2px solid;
+}
 .home-container {
+    position: relative;
+    margin: auto;
+    margin-top: 5vh;
+    z-index: 1;
   text-align: center;
   background: white;
   padding: 40px;
   border-radius: 15px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   width: 90%;
-  max-width: 600px;
+  max-width: 1000px;
+  animation: slidein 3s;
 }
 
 .home-container h1 {
@@ -98,4 +107,42 @@ li{
 
 .logout-btn:hover {
   background: #333;
+}
+.heading2{
+    text-align: center;
+    animation: slidein 3s;
+}
+.features{
+    margin: auto;
+    width: 90%;
+    /*temperory*/
+    height: 500px;
+    max-width: 1000px;
+    border: 2px solid;
+    animation: slidein 3s;
+}
+footer{
+    height: 200px;
+}
+@keyframes slidein{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes motion{
+    0%{
+        opacity: 0.1;
+        transform: translate(-10vw);
+    }
+    50%{
+        opacity: 1;
+        transform: translate(50vw);
+    }
+    100%{
+        opacity: 0.1;
+        transform: translate(110vw);
+    }
 }
